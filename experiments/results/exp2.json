@@ -1,0 +1,397 @@
+{
+  "paths_total": 9229,
+  "round_trip_successes": 9229,
+  "round_trip_mismatches": 0,
+  "round_trip_errors": 0,
+  "adversarial": {
+    "cases_total": 64,
+    "cases_rejected": 64,
+    "cases_passed_through": 0,
+    "detail": [
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_1]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_2]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_2]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_3]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_3]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_4]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_4]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_5]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_5]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_6]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_6]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_7]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_7]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_8]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_8]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_9]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_9]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_10]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_10]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_11]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_11]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_12]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_12]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_13]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_13]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_14]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_14]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_15]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_15]` is unknown"
+      },
+      {
+        "category": "unknown_placeholder",
+        "input": "[WORKSPACE_ROOT_16]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_16]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/../etc/passwd",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/../../root/.ssh/id_rsa",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "../../etc/shadow",
+        "rejected": true,
+        "error": "path traversal is not allowed: ../../etc/shadow"
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/legal/../../boot.ini",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/.././README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "../",
+        "rejected": true,
+        "error": "path traversal is not allowed: ../"
+      },
+      {
+        "category": "traversal",
+        "input": "..",
+        "rejected": true,
+        "error": "path traversal is not allowed: .."
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/../../../..",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/foo/../../../etc",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "[WORKSPACE_ROOT_1]/foo/bar/../../..",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "../[WORKSPACE_ROOT_1]/foo",
+        "rejected": true,
+        "error": "path traversal is not allowed: ../[WORKSPACE_ROOT_1]/foo"
+      },
+      {
+        "category": "traversal",
+        "input": "/Users/alice/work/repo/../escape",
+        "rejected": true,
+        "error": "path traversal is not allowed: /Users/alice/work/repo/../escape"
+      },
+      {
+        "category": "traversal",
+        "input": "[REPO_ROOT_1]/../../etc",
+        "rejected": true,
+        "error": "placeholder `[REPO_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "[REPO_ROOT_1]/../../../",
+        "rejected": true,
+        "error": "placeholder `[REPO_ROOT_1]` is unknown"
+      },
+      {
+        "category": "traversal",
+        "input": "/foo/../bar",
+        "rejected": true,
+        "error": "path traversal is not allowed: /foo/../bar"
+      },
+      {
+        "category": "traversal",
+        "input": "[USER_HOME_1]/..",
+        "rejected": true,
+        "error": "placeholder `[USER_HOME_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[REPO_ROOT_99]/legal/[SENSITIVE_DOC_2].pdf",
+        "rejected": true,
+        "error": "placeholder `[REPO_ROOT_99]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[WORKSPACE_ROOT_1]/[SENSITIVE_PATH_SEGMENT_99]/foo.py",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[USER_HOME_55]/.ssh/id_rsa",
+        "rejected": true,
+        "error": "placeholder `[USER_HOME_55]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[BRANCH_NAME_3]/foo",
+        "rejected": true,
+        "error": "placeholder `[BRANCH_NAME_3]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[ACCESS_TOKEN_1]",
+        "rejected": true,
+        "error": "placeholder `[ACCESS_TOKEN_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[EMAIL_77]",
+        "rejected": true,
+        "error": "placeholder `[EMAIL_77]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[WORKSPACE_ROOT_1]/[REPO_ROOT_2]",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[WORKSPACE_ROOT_1]/[REPO_ROOT_2]/foo.txt",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[WORKSPACE_ROOT_1]/legal/[SENSITIVE_DOC_42].pdf",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[WORKSPACE_ROOT_1]/legal/[SENSITIVE_DOC_X].pdf",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[NOT_A_REAL_TYPE_1]",
+        "rejected": true,
+        "error": "placeholder `[NOT_A_REAL_TYPE_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[FOO]",
+        "rejected": true,
+        "error": "placeholder `[FOO]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "/[WORKSPACE_ROOT_1]",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[REPO_ROOT_1]/legal/[SENSITIVE_PATH_SEGMENT_42]/foo.txt",
+        "rejected": true,
+        "error": "placeholder `[REPO_ROOT_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[USER_HOME_1]/[REPO_ROOT_1]/foo",
+        "rejected": true,
+        "error": "placeholder `[USER_HOME_1]` is unknown"
+      },
+      {
+        "category": "mixed_or_spoofed",
+        "input": "[INTERNAL_HOST_1]/foo",
+        "rejected": true,
+        "error": "placeholder `[INTERNAL_HOST_1]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT_1/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT]/README.md",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[]",
+        "rejected": true,
+        "error": "placeholder `[]` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[ABC[DEF]]",
+        "rejected": true,
+        "error": "placeholder `[ABC[DEF]]` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "][",
+        "rejected": true,
+        "error": "placeholder `][` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[ABC]/[DEF]",
+        "rejected": true,
+        "error": "placeholder `[ABC]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[\\x00]",
+        "rejected": true,
+        "error": "placeholder `[\\x00]` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT_1]\\..\\etc",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]\\..\\etc` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "//[WORKSPACE_ROOT_1]",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT_1]/\u0000/file",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT_1]/légal",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_1]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[USER_HOME_1]/\\..\\Windows",
+        "rejected": true,
+        "error": "placeholder `[USER_HOME_1]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT_-1]",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_-1]` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT_]",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT_]` is unknown"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[WORKSPACE_ROOT 1]",
+        "rejected": true,
+        "error": "placeholder `[WORKSPACE_ROOT 1]` cannot be rebound safely"
+      },
+      {
+        "category": "malformed_brackets",
+        "input": "[user_home_1]",
+        "rejected": true,
+        "error": "placeholder `[user_home_1]` cannot be rebound safely"
+      }
+    ]
+  }
+}

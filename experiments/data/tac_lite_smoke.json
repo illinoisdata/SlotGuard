@@ -1,0 +1,39 @@
+{
+  "source_root": "/workspace/proj_guard/TheAgentCompany",
+  "seed": 23715655342183493,
+  "variants_per_task": 4,
+  "source_tasks": [
+    "sde-fix-factual-mistake",
+    "sde-dependency-change-1",
+    "sde-write-a-unit-test-for-search_file-function",
+    "sde-write-a-unit-test-for-append_file-function",
+    "sde-write-a-unit-test-for-scroll_down-function",
+    "sde-migrate-package-manager",
+    "sde-sotopia-update-ci",
+    "sde-sotopia-create-agent",
+    "sde-sotopia-dev-container",
+    "sde-change-license-easy"
+  ],
+  "tasks": [
+    {
+      "id": "sde-fix-factual-mistake__v01",
+      "source_task": "sde-fix-factual-mistake",
+      "repo": "openhands",
+      "title": "Fix the factual mistake in the math agent YAML [1]",
+      "workspace_root": "/Users/eve/work/openhands_task_01",
+      "description": "Pick the exact file to inspect next before editing the factual examples.",
+      "turns": [
+        "User: Clone OpenHands repository from http://the-agent-company.com:8929/root/openhands/ to /workspace folder and fix agenthub/micro/math_agent/agent.yaml locally. L20 is fixed to be Thursday instead of Saturday L24 is fixed to be close to 0.620537 instead of 0.603848",
+        "Tool output: Local checkout root is /Users/eve/work/openhands_task_01."
+      ],
+      "candidates": [
+        "/Users/eve/work/openhands_task_01/evaluation/agent_bench/helper.py",
+        "/Users/eve/work/openhands_task_01",
+        "/Users/eve/work/openhands_task_01/evaluation/agent_bench/run_infer.py",
+        "/Users/eve/work/openhands_task_01/agenthub/micro/math_agent/agent.yaml"
+      ],
+      "expected_action": "read_file",
+      "expected_path": "/Users/eve/work/openhands_task_01/agenthub/micro/math_agent/agent.yaml"
+    }
+  ]
+}

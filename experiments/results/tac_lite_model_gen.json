@@ -1,0 +1,243 @@
+{
+  "dataset_source": "/workspace/proj_guard/TheAgentCompany",
+  "mode": "Hybrid",
+  "timeout_ms": 180000,
+  "tasks_total": 160,
+  "source_tasks": 33,
+  "source_handles": 40,
+  "models_total": 4,
+  "by_model": [
+    {
+      "model": "DeepSeek-V3.2",
+      "endpoint": "https://haocheng-xia.services.ai.azure.com/openai/v1/chat/completions",
+      "by_condition": [
+        {
+          "condition": "unprotected",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.95,
+          "tool_valid_rate": 0.975,
+          "execution_ready_rate": 0.95,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 1389.1209277375008
+        },
+        {
+          "condition": "generic_redaction",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.0,
+          "tool_valid_rate": 0.7,
+          "execution_ready_rate": 0.0,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.7,
+          "avg_latency_ms": 1339.4696833999997
+        },
+        {
+          "condition": "vibeguard_style_placeholder",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.34375,
+          "tool_valid_rate": 0.85,
+          "execution_ready_rate": 0.34375,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 3139.9478889062475
+        },
+        {
+          "condition": "slotguard_full",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.875,
+          "tool_valid_rate": 0.925,
+          "execution_ready_rate": 0.875,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 1311.0592689124999
+        }
+      ]
+    },
+    {
+      "model": "gpt-5.4",
+      "endpoint": "https://haocheng-xia.services.ai.azure.com/openai/v1/chat/completions",
+      "by_condition": [
+        {
+          "condition": "unprotected",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.925,
+          "tool_valid_rate": 0.975,
+          "execution_ready_rate": 0.925,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 556.0603987500003
+        },
+        {
+          "condition": "generic_redaction",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.0,
+          "tool_valid_rate": 0.075,
+          "execution_ready_rate": 0.0,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 1.0,
+          "avg_latency_ms": 448.48830197500064
+        },
+        {
+          "condition": "vibeguard_style_placeholder",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.36875,
+          "tool_valid_rate": 0.95,
+          "execution_ready_rate": 0.36875,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 492.4590082812494
+        },
+        {
+          "condition": "slotguard_full",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.925,
+          "tool_valid_rate": 0.975,
+          "execution_ready_rate": 0.925,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 458.7916559874998
+        }
+      ]
+    },
+    {
+      "model": "Kimi-K2.6",
+      "endpoint": "https://haocheng-xia.services.ai.azure.com/openai/v1/chat/completions",
+      "by_condition": [
+        {
+          "condition": "unprotected",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.95,
+          "tool_valid_rate": 0.975,
+          "execution_ready_rate": 0.95,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 4273.292452518752
+        },
+        {
+          "condition": "generic_redaction",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.0,
+          "tool_valid_rate": 1.0,
+          "execution_ready_rate": 0.0,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 1.0,
+          "avg_latency_ms": 3472.31768859375
+        },
+        {
+          "condition": "vibeguard_style_placeholder",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.35625,
+          "tool_valid_rate": 0.90625,
+          "execution_ready_rate": 0.35625,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 10967.786833087488
+        },
+        {
+          "condition": "slotguard_full",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.95,
+          "tool_valid_rate": 0.975,
+          "execution_ready_rate": 0.95,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 3160.2326672437566
+        }
+      ]
+    },
+    {
+      "model": "Llama-3.3-70B-Instruct",
+      "endpoint": "https://haocheng-xia.services.ai.azure.com/openai/v1/chat/completions",
+      "by_condition": [
+        {
+          "condition": "unprotected",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.9,
+          "tool_valid_rate": 0.95,
+          "execution_ready_rate": 0.9,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 651.0528939250011
+        },
+        {
+          "condition": "generic_redaction",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.0,
+          "tool_valid_rate": 0.75,
+          "execution_ready_rate": 0.0,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.8,
+          "avg_latency_ms": 639.748486018749
+        },
+        {
+          "condition": "vibeguard_style_placeholder",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.26875,
+          "tool_valid_rate": 0.59375,
+          "execution_ready_rate": 0.26875,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 913.8907037125
+        },
+        {
+          "condition": "slotguard_full",
+          "tasks": 160,
+          "structural_tasks": 160,
+          "secret_tasks": 0,
+          "task_success_rate": 0.9,
+          "tool_valid_rate": 0.925,
+          "execution_ready_rate": 0.9,
+          "ask_secret_rate": 0.0,
+          "credential_present_inference_rate": 0.0,
+          "invalid_handle_rate": 0.0,
+          "avg_latency_ms": 579.8210297187509
+        }
+      ]
+    }
+  ]
+}

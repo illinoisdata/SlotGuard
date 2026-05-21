@@ -1,0 +1,36 @@
+{
+  "instances": 30,
+  "total_paths": 9229,
+  "transcript_metrics": {
+    "baseline_chars": 36087,
+    "guarded_chars": 29119,
+    "sensitive_baseline_chars": 20814,
+    "sensitive_guarded_chars": 0,
+    "sensitive_reduction_pct": 100.0,
+    "user_home_prefixes_baseline": 285,
+    "user_home_prefixes_guarded": 0,
+    "repo_root_prefixes_baseline": 285,
+    "repo_root_prefixes_guarded": 0,
+    "emails_baseline": 30,
+    "emails_guarded": 0,
+    "internal_hosts_baseline": 30,
+    "internal_hosts_guarded": 0,
+    "tokens_baseline": 60,
+    "tokens_guarded": 0
+  },
+  "path_metrics": {
+    "total_paths": 9229,
+    "paths_retaining_extension": 8640,
+    "paths_retaining_at_least_one_suffix_component": 9229,
+    "paths_fully_opaque": 0,
+    "paths_outside_scope": 0
+  },
+  "sensitive_doc_detection": {
+    "ground_truth_positives": 15,
+    "detected_true_positives": 15,
+    "detected_false_positives": 0,
+    "detected_false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  }
+}

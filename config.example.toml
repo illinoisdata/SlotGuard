@@ -1,0 +1,29 @@
+# Example configuration for the current transcript-boundary SlotGuard setup.
+
+[paths]
+workspace_roots = ["/workspace/proj_guard"]
+repo_roots = ["/workspace/proj_guard"]
+
+[path_policy]
+preserve_suffix_segments = 3
+abstract_sensitive_filenames = true
+preserve_extensions = true
+
+[semantic]
+mode = "off"
+api_style = "openai_chat"
+endpoint = "http://127.0.0.1:11434/v1/chat/completions"
+model = "qwen2.5-coder:1.5b"
+api_key_env = ""
+timeout_ms = 60000
+max_input_chars = 2000
+
+[shell]
+enabled = false
+allowed_commands = ["pwd", "ls", "cat", "grep", "rg", "git status", "git branch"]
+
+[sensitive_keywords]
+values = ["layoff", "salary", "compensation", "legal", "contract", "acquisition", "secret", "private"]
+
+[internal_hosts]
+suffixes = [".internal", ".intranet", ".local", ".lan", ".corp"]

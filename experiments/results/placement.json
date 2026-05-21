@@ -1,0 +1,274 @@
+{
+  "rows": [
+    {
+      "source": "user_prompt_raw_path",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": false,
+        "rewrites_provider_bound_payload": false,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "tool_call_raw_path",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "tool_output_raw_path",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": false,
+        "rewrites_provider_bound_payload": false,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "shell_stdout_stderr_secret",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": false,
+        "rewrites_provider_bound_payload": false,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "process_listing_env_fallback_secret",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": false,
+        "rewrites_provider_bound_payload": false,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "file_read_result_secret",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "config_snippet_secret",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": false,
+        "rewrites_provider_bound_payload": false,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "model_generated_followup_using_sanitized_binding",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "limited",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": false
+      }
+    },
+    {
+      "source": "cross_turn_transcript_reuse",
+      "harness": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "full",
+        "supports_rebinding": "limited",
+        "prevents_local_log_persistence": true
+      },
+      "filesystem": {
+        "sees_raw_before_provider": false,
+        "rewrites_provider_bound_payload": false,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      },
+      "gateway": {
+        "sees_raw_before_provider": true,
+        "rewrites_provider_bound_payload": true,
+        "supports_scope_validation": "none",
+        "supports_rebinding": "none",
+        "prevents_local_log_persistence": false
+      }
+    }
+  ],
+  "placement_capabilities": [
+    {
+      "placement": "harness",
+      "observe_surface": [
+        "prompt",
+        "tool call",
+        "tool output",
+        "shell stdout/stderr",
+        "process listing",
+        "file content"
+      ],
+      "strengths": [
+        "maximal provider-bound coverage",
+        "can prevent downstream transcript accumulation",
+        "can validate scope before local execution"
+      ],
+      "limitations": [
+        "requires harness integration",
+        "may be client-specific"
+      ]
+    },
+    {
+      "placement": "filesystem",
+      "observe_surface": [
+        "file paths",
+        "directory listings",
+        "file read results"
+      ],
+      "strengths": [
+        "strong path/filename virtualization",
+        "can validate local path scope"
+      ],
+      "limitations": [
+        "cannot see prompt-only leaks",
+        "cannot redact shell/process output"
+      ]
+    },
+    {
+      "placement": "gateway",
+      "observe_surface": [
+        "provider-bound prompt",
+        "provider-bound tool output",
+        "streamed transcript"
+      ],
+      "strengths": [
+        "works across model backends",
+        "easy to deploy as last-line defense"
+      ],
+      "limitations": [
+        "cannot remove raw values already logged locally",
+        "scope validation and rebinding are limited"
+      ]
+    }
+  ]
+}

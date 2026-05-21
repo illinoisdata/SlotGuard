@@ -1,0 +1,89 @@
+{
+  "samples_per_category": 40,
+  "by_category": [
+    {
+      "category": "api_key",
+      "samples": 40,
+      "regex_or_parser_acceptance_rate": 1.0,
+      "length_match_rate": 1.0,
+      "prefix_convention_rate": 1.0
+    },
+    {
+      "category": "database_credential",
+      "samples": 40,
+      "regex_or_parser_acceptance_rate": 1.0,
+      "length_match_rate": 0.375,
+      "prefix_convention_rate": 1.0
+    },
+    {
+      "category": "oauth_token",
+      "samples": 40,
+      "regex_or_parser_acceptance_rate": 1.0,
+      "length_match_rate": 1.0,
+      "prefix_convention_rate": 1.0
+    },
+    {
+      "category": "pii_identifier",
+      "samples": 40,
+      "regex_or_parser_acceptance_rate": 1.0,
+      "length_match_rate": 0.0,
+      "prefix_convention_rate": 1.0
+    },
+    {
+      "category": "cryptographic_key",
+      "samples": 40,
+      "regex_or_parser_acceptance_rate": 1.0,
+      "length_match_rate": 1.0,
+      "prefix_convention_rate": 1.0
+    },
+    {
+      "category": "internal_hostname",
+      "samples": 40,
+      "regex_or_parser_acceptance_rate": 1.0,
+      "length_match_rate": 1.0,
+      "prefix_convention_rate": 1.0
+    }
+  ],
+  "by_context": [
+    {
+      "context": "dotenv",
+      "samples": 240,
+      "parse_success_rate": 0.8333333333333334
+    },
+    {
+      "context": "header",
+      "samples": 240,
+      "parse_success_rate": 1.0
+    },
+    {
+      "context": "json",
+      "samples": 240,
+      "parse_success_rate": 0.8333333333333334
+    },
+    {
+      "context": "shell_assignment",
+      "samples": 240,
+      "parse_success_rate": 0.8333333333333334
+    },
+    {
+      "context": "shell_fallback",
+      "samples": 240,
+      "parse_success_rate": 0.8333333333333334
+    },
+    {
+      "context": "toml",
+      "samples": 240,
+      "parse_success_rate": 0.8333333333333334
+    },
+    {
+      "context": "uri",
+      "samples": 240,
+      "parse_success_rate": 1.0
+    },
+    {
+      "context": "yaml",
+      "samples": 240,
+      "parse_success_rate": 1.0
+    }
+  ]
+}
