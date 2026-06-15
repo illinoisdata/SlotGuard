@@ -5265,7 +5265,7 @@ fn render_report(results_dir: &Path) -> Result<String> {
                 ));
             }
         }
-        out.push('\n');
+        out.push_str("\nMicrobenchmark timings are machine-dependent; the committed values are measured on the artifact host and may differ slightly from the medians reported in the paper.\n\n");
     } else {
         out.push_str("Run `cargo bench -p slotguard-core && python3 experiments/scripts/criterion_summary.py` to populate this section.\n\n");
     }
@@ -5776,7 +5776,7 @@ fn render_exp6_section(results_dir: &Path) -> Result<Option<String>> {
 // =================================================================
 //
 // Implements paper §5.2 "Credential Benchmark". We construct 200
-// OpenCode-style multi-turn sessions, plant ~847 credentials across six
+// OpenCode-style multi-turn sessions, plant 852 credentials across six
 // categories using five exposure modes (direct / embedded / split /
 // derived / cross-turn), then run four conditions:
 //
@@ -5844,6 +5844,12 @@ fn category_from_str(label: &str) -> CredentialCategory {
 
 const EXPOSURE_TYPES: &[&str] = &["direct", "embedded", "split", "derived", "cross_turn"];
 
+// Number of sessions (of the default 200) that additionally carry a 5th,
+// cross-turn credential. Every session already contributes 4 base credentials
+// (direct / embedded / split / derived), so the corpus total is deterministic:
+// 200 * 4 + CROSS_TURN_SESSIONS = 800 + 52 = 852, matching paper Table 5.
+const CROSS_TURN_SESSIONS: usize = 52;
+
 const ANCHOR_TOKENS: &[&str] = &[
     "AuthMiddleware",
     "parse_token",
@@ -5874,13 +5880,15 @@ fn synthesize_credential_session(rng: &mut StdRng, idx: usize) -> CredentialSess
     // Each session:
     //   - 6-8 turns of mixed user / assistant / tool content
     //   - 4-5 credentials per session, evenly across categories.
-    //     With 200 sessions × 4-5 we land around 850-900 credentials,
-    //     matching the paper's 847 to within ~5%.
     //   - 4-6 task anchors that the LLM would need to keep intact.
     let turn_count = rng.gen_range(6..=8);
-    // Mostly 4 with a 25% chance of 5 → expected 4.25 cred/session,
-    // i.e. 200×4.25 = 850 credentials, matching paper Table 2's 847.
-    let credential_count = if rng.gen_bool(0.25) { 5 } else { 4 };
+    // Deterministic credential count: every session gets the 4 base exposures
+    // (direct / embedded / split / derived); the first CROSS_TURN_SESSIONS
+    // sessions also get a 5th, cross-turn reference. This fixes the corpus
+    // total at 800 + 52 = 852 (paper Table 5) regardless of seed. `split`
+    // appears in every session, so pattern-only / FPS-only leak exactly 200
+    // (200/852 = 23.5%) and FPS+SEG leaks 0/852 = 0.0%.
+    let credential_count = if idx < CROSS_TURN_SESSIONS { 5 } else { 4 };
     let anchor_count = rng.gen_range(4..=6);
 
     let anchors: Vec<String> = ANCHOR_TOKENS

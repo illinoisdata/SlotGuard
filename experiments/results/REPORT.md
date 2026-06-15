@@ -44,16 +44,16 @@ Coverage is reported for three deployment points: the agent harness, a filesyste
 
 ## Credential Benchmark — FPS + SEG (Paper Table 2)
 
-- Sessions: **200**, planted credentials: **848**
+- Sessions: **200**, planted credentials: **852**
 
 Leakage metrics measure what survives the sanitizer in the upstream payload. The rightmost column is a **structural proxy** for task recoverability — see the caveat block under the table.
 
 | Method | Session leak ↓ | Credential leak ↓ | Categorical leak ↓ | Anchor preservation ↑ (proxy) |
 |---|---|---|---|---|
-| none | 100.0% | 100.0% (848/848) | 0.0% | 100.0% |
-| pattern_placeholder | 100.0% | 23.6% (200/848) | 100.0% | 100.0% |
-| fps_only | 100.0% | 23.6% (200/848) | 0.0% | 100.0% |
-| fps_with_seg | 0.0% | 0.0% (0/848) | 0.0% | 100.0% |
+| none | 100.0% | 100.0% (852/852) | 0.0% | 100.0% |
+| pattern_placeholder | 100.0% | 23.5% (200/852) | 100.0% | 100.0% |
+| fps_only | 100.0% | 23.5% (200/852) | 0.0% | 100.0% |
+| fps_with_seg | 0.0% | 0.0% (0/852) | 0.0% | 100.0% |
 
 **How to read the table.** *Session leak* counts a session as leaked if any of its planted credentials survives in the upstream payload — a binary metric per session, so it saturates whenever even one credential class slips through. *Credential leak* is the per-credential rate over all planted values and shows that pattern-only and FPS-only both miss exactly the "split" exposure (~25% of credentials), while FPS+SEG closes that gap. *Categorical leak* counts sessions whose payload contains a typed `__CATEGORY_n__` placeholder — pattern-only inevitably leaks the category of every value, FPS does not.
 
@@ -73,9 +73,9 @@ Leakage metrics measure what survives the sanitizer in the upstream payload. The
 | embedded | 200/200 | 0/200 | 0/200 | 0/200 |
 | split | 200/200 | 200/200 | 200/200 | 0/200 |
 | derived | 200/200 | 0/200 | 0/200 | 0/200 |
-| cross_turn | 48/48 | 0/48 | 0/48 | 0/48 |
+| cross_turn | 52/52 | 0/52 | 0/52 | 0/52 |
 
-> Conditions evaluated against 200 sessions × ~848 credentials. `leakage_rate` = fraction of sessions where ≥1 planted credential survives in the upstream payload after split-artifact normalization. `categorical_leakage_rate` = fraction with a typed `__CATEGORY_n__` placeholder. `anchor_preservation_rate` is a STRUCTURAL PROXY (do task-anchor tokens survive the sanitizer?), NOT real LLM task success. Real task success requires Experiment 4 (live workflow probe against an OpenAI-compatible endpoint) and is NOT comparable to the paper's success-rate numbers.
+> Conditions evaluated against 200 sessions × ~852 credentials. `leakage_rate` = fraction of sessions where ≥1 planted credential survives in the upstream payload after split-artifact normalization. `categorical_leakage_rate` = fraction with a typed `__CATEGORY_n__` placeholder. `anchor_preservation_rate` is a STRUCTURAL PROXY (do task-anchor tokens survive the sanitizer?), NOT real LLM task success. Real task success requires Experiment 4 (live workflow probe against an OpenAI-compatible endpoint) and is NOT comparable to the paper's success-rate numbers.
 
 ## Experiment 4 — Workflow Compatibility
 
@@ -157,6 +157,8 @@ Captured via `cargo bench -p slotguard-core` and post-processed by `experiments/
 | rebind_path_sensitive_doc | 0.429 µs | 0.513 µs | 100 |
 | sanitize_turn/fps_only_agent_turn | 12.525 µs | 14.309 µs | 100 |
 | sanitize_turn/fps_with_seg_agent_turn | 13.338 µs | 25.981 µs | 100 |
+
+Microbenchmark timings are machine-dependent; the committed values are measured on the artifact host and may differ slightly from the medians reported in the paper.
 
 ## Experiment 6 — Local-LLM Semantic Layer
 
