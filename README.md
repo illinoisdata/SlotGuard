@@ -65,6 +65,13 @@ under `~/.slotguard/sessions/<id>/` (`session_key`, `index.json`,
 sessions yield different handles for the same raw value, so handles are
 unlinkable across runs.
 
+## Research Plans
+
+- [NLIP full-paper research plan (中文)](docs/nlip-full-paper-plan.zh-CN.md) —
+  proposed protocol-aware privacy and capability boundaries for cross-domain
+  agent collaboration. This is a research roadmap, not a list of implemented
+  features or validated results.
+
 ## Citation
 
 If this repo is helpful for your research, please cite our paper.
